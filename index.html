@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      // Amélioration des objets en JS 
+    Array.prototype.showAllImpots  = function(){
+        for(var i=0; i<=this.length-1; i++){
+
+            console.log(this[i])
+        }
+    };
+
+    // Création d'un tableau 
+    var tabImpots = [imp1, imp2, imp3];
+    tabImpots.showAllImpots();
+
+    //Notion et utilisation des événements
+        // test du bouillonnement d'événements 
+        // doChange
+        function doChange(e) {
+          console.dir(e);
+          console.log('onChange');
+        }
+
+        // doClick
+        function doClick(e) {
+            console.dir(e);
+            console.log('onClick');
+        }
+
+        // doMouseOver
+        function doMouseOver(e) {
+            console.dir(e);
+            console.log('onMouseOver')
+        }
+
+        function doClickDiv(e) {
+            console.log('Click div');
+            console.dir(e);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <div onclick="doClickDiv(event)">
+            <input type="text" onchange="doChange(event)"> 
+            <input type="button" onclick='doClick(event)' value="button"><br>
+            <img type="img" onmouseover="doMouseOver(event)" src="https://picsum.photos/200/300" alt="image">
+        </div>
+    </div>
+</body>
+</html>
